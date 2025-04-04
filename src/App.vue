@@ -1,8 +1,9 @@
 <template>
   <TheHeader v-show="showHeader"/>
 
-  <div>
-    Nome: {{ name }}
+  <div v-show="showName"
+    Nome: {{ firstName }} <br>
+    Sobrenome: {{ lastName }}
   </div>
 
   <img alt="Vue logo" src="./assets/logo.png">
@@ -23,7 +24,9 @@ export default {
   data () {
     return {
       showHeader:true,
-      name: false,
+      firstName: 'Jhon',
+      lastName: 'Snow',
+      showName: false,
     }
   }
 }
