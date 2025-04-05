@@ -1,10 +1,10 @@
 <template>
 
-    <div v-for="obj in todos"
+    <div v-for="(obj, index) in todos"
     v-bind:key="obj.id"
     class="todos-item"
     >
-        {{ obj.title }}
+        {{ index }} - {{ obj.title }}
     </div>
 
     <header class="header">
@@ -60,6 +60,8 @@ export default {
 .header {
     background: #000;
     color: #fff;
+    margin: auto;
+    width: 200px;
 }
 
 .todos-item {
@@ -67,5 +69,9 @@ export default {
     margin: 0 0 5px 0;
     padding: 3px 6px;
     color: #fff;
+    width: 400px;
+    margin: auto;
+    margin-bottom: 5px;
+    text-align: justify;
 }
 </style>
