@@ -1,11 +1,12 @@
 <template>
 
-    <div v-for="(obj, index) in todos"
-    v-bind:key="obj.id"
-    class="todos-item"
-    >
+    <div v-for="(obj, index) in todos" v-bind:key="obj.id" class="todos-item">
         {{ index }} - {{ obj.title }}
+        <img 
+        v-if="obj.imgSrc"
+        v-bind:src="obj.imgSrc">
     </div>
+
 
     <header class="header">
         Header
@@ -19,18 +20,22 @@ export default {
     name: 'TheHeader',
     data() {
         return {
+            // imgSrc: "https://via.placeholder.com/150",
+            // imgAlt: "foto de Jhon Snow",
             todos: [
                 {
                     "userId": 1,
                     "id": 1,
                     "title": "delectus aut autem",
-                    "completed": false
+                    "completed": false,
+                    "imgSrc": "https://via.placeholder.com/150",
                 },
                 {
                     "userId": 1,
                     "id": 2,
                     "title": "quis ut nam facilis et officia qui",
-                    "completed": false
+                    "completed": false,
+                    "imgSrc": "https://via.placeholder.com/150",
                 },
                 {
                     "userId": 1,
