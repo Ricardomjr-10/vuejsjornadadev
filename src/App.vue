@@ -1,5 +1,6 @@
 <template>
-  <TheHeader v-show="showHeader"/>
+  <Aula8 v-show="showAula8"></Aula8>
+  <!-- <TheHeader v-show="showHeader"/>
 
   <div v-show="showName">
     Nome: {{ firstName }} <br>
@@ -11,19 +12,21 @@
   <div v-else>Usuario normal</div>
 
   <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HelloWorld msg="Welcome to Your Vue.js App"/> -->
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import TheHeader from './components/TheHeader.vue';
+import Aula8 from './components/aula8.vue';
+// import HelloWorld from './components/HelloWorld.vue'
+// import TheHeader from './components/TheHeader.vue';
 
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    TheHeader
+    // HelloWorld,
+    // TheHeader,
+    Aula8
   },
   data () {
     return {
