@@ -1,5 +1,5 @@
 <template>
-  <Aula8 v-show="showAula8"></Aula8>
+  <AulaOito></AulaOito>
   <!-- <TheHeader v-show="showHeader"/>
 
   <div v-show="showName">
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Aula8 from './components/aula8.vue';
+import AulaOito from './components/AulaOito.vue';
 // import HelloWorld from './components/HelloWorld.vue'
 // import TheHeader from './components/TheHeader.vue';
 
@@ -26,7 +26,7 @@ export default {
   components: {
     // HelloWorld,
     // TheHeader,
-    Aula8
+    AulaOito
   },
   data () {
     return {
