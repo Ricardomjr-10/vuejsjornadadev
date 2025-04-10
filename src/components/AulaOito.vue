@@ -15,6 +15,24 @@
             <option value="Tenis">Tenis</option>
         </select> <br>
         {{ sports }}
+    </div> <br>
+
+    <div>
+        <label for="">Newsletter</label>
+        <input v-model="newsletter" type="radio" value="sim">sim
+        <input v-model="newsletter" type="radio" value="nao">nao <br>
+        {{ newsletter }}
+    </div> <br>
+
+    <div>
+        <input v-model="contract" type="checkbox"> aceita nosso termo... <br>
+        {{ contract }}
+    </div> <br>
+
+    <div>
+        <input v-model="colors" type="checkbox" value="amarelo"> Amarelo <br>
+        <input v-model="colors" type="checkbox" value="azul"> Azul <br>
+        {{ colors }}
     </div>
 
 </template>
@@ -25,15 +43,18 @@
         data() {
             return {
                 name: 'Ricardo',
-                sports: 'Futebol'
+                sports: 'Futebol',
+                newsletter: 'sim',
+                contract: false,
+                colors: []
             }
         }
     }
 </script>
 
 <style>
-div {
-    background-color: aqua;
+body {
+    background-color: gray;
 }
 
 </style>
