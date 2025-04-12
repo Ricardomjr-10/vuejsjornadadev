@@ -1,5 +1,7 @@
 <template>
-
+<div>
+    <h1>Propriedade Computada</h1>
+</div>
 </template>
 
 <script>
