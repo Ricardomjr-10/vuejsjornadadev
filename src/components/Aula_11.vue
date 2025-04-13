@@ -3,7 +3,18 @@
         <h1>Aula 10 - Observadores (watch)</h1>
 
         <input v-model="name" type="text"> <br> <br>
-        {{ name }}
+        {{ name }} <br> <br> <br>
+
+        <input v-model="user.first_name" type="text">
+        <input v-model="user.last_name" type="text"> <br> <br>
+        {{ user.first_name }} {{ user.last_name }} <br> <br>
+
+        <select v-model="page" name="" id="">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+        </select>
+        {{ page }}
     </div>
 </template>
 
@@ -11,7 +22,12 @@
 export default {
     data() {
         return {
-            name: ''
+            name: '',
+            page:5,
+            user: {
+                first_name:'',
+                last_name:''
+            }
         }
     },
 
@@ -20,6 +36,9 @@ export default {
             if (vl.length >= 3) {
                 this.saveNewUser()
             }
+        },
+        page() {
+            this.changePage()
         }
     },
 
@@ -31,6 +50,9 @@ export default {
         saveNewUser() {
             console.log('Ajax') //colocar no method para não encher
             console.log(this.name)
+        },
+        changePage() {
+            console.log('Ajax changePage')
         }
     }
 }
