@@ -1,5 +1,5 @@
 <template>
-  <AulaDez></AulaDez>
+  <Aula11></Aula11>
   <!-- <EventoNove></EventoNove> -->
   <!-- <AulaOito></AulaOito> -->
   <!-- <TheHeader v-show="showHeader"/>
@@ -18,8 +18,10 @@
 </template>
 
 <script>
+import Aula11 from './components/Aula11.vue';
+
 //import AulaOito from './components/AulaOito.vue';
-import AulaDez from './components/AulaDez.vue';
+//import AulaDez from './components/AulaDez.vue';
 // import EventoNove from './components/EventoNove.vue';
 // import HelloWorld from './components/HelloWorld.vue'
 // import TheHeader from './components/TheHeader.vue';
@@ -32,7 +34,8 @@ export default {
     // TheHeader,
     //AulaOito,
     // EventoNove,
-    AulaDez
+   // AulaDez
+   Aula11
   },
   data () {
     return {
@@ -51,7 +54,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align:center;
   color: #2c3e50;
   margin-top: 60px;
 }
