@@ -31,7 +31,7 @@ export default {
         }
     },
 
-    watch: {
+    watch: { // observadores para rotinas casa alguma coisa aconteca
         name (vl) {
             if (vl.length >= 3) {
                 this.saveNewUser()
