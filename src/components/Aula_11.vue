@@ -16,9 +16,10 @@ export default {
     },
 
     watch: {
-        name (newValue, oldValue) {
-            console.log('Ajax')
-            console.log(newValue, oldValue)
+        name (vl) {
+            if (vl.length >= 3) {
+                this.saveNewUser()
+            }
         }
     },
 
@@ -27,7 +28,10 @@ export default {
     },
 
     methods: {
-
+        saveNewUser() {
+            console.log('Ajax') //colocar no method para não encher
+            console.log(this.name)
+        }
     }
 }
 </script>
