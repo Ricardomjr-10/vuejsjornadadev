@@ -1,5 +1,5 @@
 <template>
-  <Aula11></Aula11>
+  <Aula_11></Aula_11>
   <!-- <EventoNove></EventoNove> -->
   <!-- <AulaOito></AulaOito> -->
   <!-- <TheHeader v-show="showHeader"/>
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import Aula11 from './components/Aula11.vue';
+import Aula_11 from './components/Aula_11.vue';
 
 //import AulaOito from './components/AulaOito.vue';
 //import AulaDez from './components/AulaDez.vue';
@@ -35,7 +35,7 @@ export default {
     //AulaOito,
     // EventoNove,
    // AulaDez
-   Aula11
+   Aula_11
   },
   data () {
     return {
