@@ -39,6 +39,12 @@ export default {
         },
         page() {
             this.changePage()
+        },
+        user: {
+            handler() {
+                console.log('user alterado')
+            },
+            deep: true
         }
     },
 
