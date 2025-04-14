@@ -39,36 +39,36 @@ export default {
 
     },
     // HOOKS
-    beforeCreate() {
-        console.log('beforeCreate')
-        console.log('Estado: ', this.name)
-        console.log('DOM:', this.$el)
-    },
-    created () {
-        console.log('created')
-        console.log('Estado: ', this.name)
-        console.log('DOM:', this.$el)
-    },
-    beforeMount() {
-        console.log('beforeMount')
-        console.log('Estado: ', this.name)
-        console.log('DOM:', this.$el)
-    },
-    mounted() {
-        console.log('mounted')
-        console.log('Estado: ', this.name)
-        console.log('DOM:', this.$el)
-    },
-    beforeUnmount() {
-        console.log('beforeUmount')
-        console.log('Estado: ', this.name)
-        console.log('DOM:', this.$el)
-    },
-    unmounted() {
-        console.log('unmounted')
-        console.log('Estado: ', this.name)
-        console.log('DOM:', this.$el)
-    }
+    // beforeCreate() {
+    //     console.log('beforeCreate')
+    //     console.log('Estado: ', this.name)
+    //     console.log('DOM:', this.$el) // $el - elemento raiz
+    // },
+    // created () {
+    //     console.log('created')
+    //     console.log('Estado: ', this.name)
+    //     console.log('DOM:', this.$el)
+    // },
+    // beforeMount() {
+    //     console.log('beforeMount')
+    //     console.log('Estado: ', this.name)
+    //     console.log('DOM:', this.$el)
+    // },
+    // mounted() {
+    //     console.log('mounted')
+    //     console.log('Estado: ', this.name)
+    //     console.log('DOM:', this.$el)
+    // },
+    // beforeUnmount() {
+    //     console.log('beforeUmount')
+    //     console.log('Estado: ', this.name)
+    //     console.log('DOM:', this.$el)
+    // },
+    // unmounted() {
+    //     console.log('unmounted')
+    //     console.log('Estado: ', this.name)
+    //     console.log('DOM:', this.$el)
+    // }
 }
 </script>
 

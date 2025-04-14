@@ -1,4 +1,8 @@
 <template>
+  <TheHeader2 v-if="showHeader"/>
+  <button @click="showHeader = !showHeader">
+    Ativar e desativar Header
+  </button>
   <Aula_12></Aula_12>
   <!-- <EventoNove></EventoNove> -->
   <!-- <AulaOito></AulaOito> -->
@@ -20,6 +24,7 @@
 <script>
 //import Aula_11 from './components/Aula_11.vue';
 import Aula_12 from './components/Aula_12.vue';
+import TheHeader2 from './components/TheHeader2.vue';
 
 //import AulaOito from './components/AulaOito.vue';
 //import AulaDez from './components/AulaDez.vue';
@@ -37,7 +42,8 @@ export default {
     // EventoNove,
    // AulaDez
    //Aula_11,
-   Aula_12
+   Aula_12,
+   TheHeader2
   },
   data () {
     return {
