@@ -6,12 +6,21 @@
 
 <script>
 export default {
+    mounted() {
+        window.addEventListener('resize', this.resize)
+    },
     beforeUnmount() {
+        window.removeEventListener('resize', this.resize)
         //destruir as libs e eventos listeners
         console.log('beforeUmount')
     },
     unmounted() {
         console.log('unmounted')
+    },
+    methods: {
+        resize($evt) {
+            console.log($evt)
+        }
     }
 }
 </script>
