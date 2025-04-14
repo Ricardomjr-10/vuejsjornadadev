@@ -1,6 +1,7 @@
 <template>
     <div class="container">
         <h1>Aula 12 - ciclo de vida (life Cycle)</h1>
+        {{ name }}
         <!-- Criação,
             preparar o componente
             ajax, inicializar algumas variaveis
@@ -25,7 +26,7 @@
 export default {
     data() {
         return {
-         
+         name:'Ricardo'
         }
     },
     watch: {
@@ -39,22 +40,34 @@ export default {
     },
     // HOOKS
     beforeCreate() {
-
+        console.log('beforeCreate')
+        console.log('Estado: ', this.name)
+        console.log('DOM:', this.$el)
     },
     created () {
-
+        console.log('created')
+        console.log('Estado: ', this.name)
+        console.log('DOM:', this.$el)
     },
     beforeMount() {
-
+        console.log('beforeMount')
+        console.log('Estado: ', this.name)
+        console.log('DOM:', this.$el)
     },
     mounted() {
-
+        console.log('mounted')
+        console.log('Estado: ', this.name)
+        console.log('DOM:', this.$el)
     },
     beforeUnmount() {
-
+        console.log('beforeUmount')
+        console.log('Estado: ', this.name)
+        console.log('DOM:', this.$el)
     },
     unmounted() {
-        
+        console.log('unmounted')
+        console.log('Estado: ', this.name)
+        console.log('DOM:', this.$el)
     }
 }
 </script>
