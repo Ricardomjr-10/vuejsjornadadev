@@ -1,10 +1,23 @@
 <template>
     <div class="container">
         <h1>Aula 12 - ciclo de vida (life Cycle)</h1>
-
-        <input v-model="valor" type="number" placeholder="insira o valor"> <br>
-        <input v-model="despesa" type="number" placeholder="adicione despesas aqui"> <br>
-        <span>Restante </span>{{ 'R$' +Number(valor - despesa)}}
+        <!-- Criação,
+            preparar o componente
+            ajax, inicializar algumas variaveis
+            não tem acesso ao template (DOM)
+          montagem, 
+            inicializar um lib externa
+            precisa de acesso ao template (DOM)
+            tem acesso ao template
+          atualizacao
+            debug
+            update
+          desmontagem 
+            remover tudo que for necessario para liberar (lib-destroy)
+            memoria
+            
+            hooks-->
+        
     </div>
 </template>
 
@@ -12,8 +25,7 @@
 export default {
     data() {
         return {
-            valor:'',
-            despesa: ''
+         
         }
     },
     watch: {
@@ -24,6 +36,25 @@ export default {
     },
     methods: {
 
+    },
+    // HOOKS
+    beforeCreate() {
+
+    },
+    created () {
+
+    },
+    beforeMount() {
+
+    },
+    mounted() {
+
+    },
+    beforeUnmount() {
+
+    },
+    unmounted() {
+        
     }
 }
 </script>
