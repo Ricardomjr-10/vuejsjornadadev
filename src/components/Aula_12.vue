@@ -1,6 +1,7 @@
 <template>
     <div class="container">
         <h1>Aula 12 - ciclo de vida (life Cycle)</h1>
+        <input v-model="name" type="text">
         {{ name }}
         <!-- Criação,
             preparar o componente
@@ -39,6 +40,12 @@ export default {
 
     },
     // HOOKS
+    beforeUpdate() {
+        console.log('beforeUpdate', this.name)
+    },
+    updated(){
+        console.log('update', this.name)
+    }
     // beforeCreate() {
     //     console.log('beforeCreate')
     //     console.log('Estado: ', this.name)

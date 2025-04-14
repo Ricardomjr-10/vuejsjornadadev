@@ -7,6 +7,7 @@
 <script>
 export default {
     beforeUnmount() {
+        //destruir as libs e eventos listeners
         console.log('beforeUmount')
     },
     unmounted() {
