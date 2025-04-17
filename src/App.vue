@@ -1,6 +1,6 @@
 <template>
   <div>
-   <Aula_15/>
+   <Aula_15 variant="danger"/>
   </div>
   <p>paragrafo</p>
 </template>

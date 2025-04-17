@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <h1>Enviando dados para o componente filho (props)</h1>
-        <div class="alert">
+        <div :class="`alert alert-${variant}`">
             Seu formulario foi enviado com sucesso
         </div>
     </div>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-
+    props: ['variant']
 }
 </script>
 
@@ -26,5 +26,16 @@ export default {
     padding: 5px;
     border-radius: 6px;
     color: gray;
+    background: #ddd;
+}
+
+.alert-success {
+    background: #42b983;
+    color: #fff;
+}
+
+.alert-danger {
+    background: red;
+    color: #fff;
 }
 </style>
