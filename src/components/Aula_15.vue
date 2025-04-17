@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <h1>Enviando dados para o componente filho (props)</h1>
-        <div :class="`alert alert-${variant}`">
+        <div :class="baseClass">
             Seu formulario foi enviado com sucesso
         </div>
     </div>
@@ -9,7 +9,15 @@
 
 <script>
 export default {
-    props: ['variant']
+    props: ['variant'],
+    computed: {
+        baseClass() {
+            return [
+                'alert',
+                this.variant ? `alert-${this.variant}` : ''
+            ]
+        }
+    }
 }
 </script>
 
