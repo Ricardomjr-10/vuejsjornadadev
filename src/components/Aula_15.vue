@@ -3,6 +3,8 @@
         <h1>Enviando dados para o componente filho (props)</h1>
         <div :class="baseClass">
             {{ text }}
+            <slot />
+            {{ test }}
         </div>
     </div>
 </template>
@@ -14,7 +16,17 @@ export default {
             text:'Seu formulario foi enviado com sucesso'
         }
     },
-    props: ['variant'],
+    props: {
+        variant:{
+            type: String,
+            default: ''
+        },
+
+        test: {
+            type: String,
+            default: 'test'
+        }
+    },
     computed: {
         baseClass() {
             return [
