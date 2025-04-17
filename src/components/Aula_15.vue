@@ -20,11 +20,6 @@ export default {
         variant:{
             type: String,
             default: ''
-        },
-
-        test: {
-            type: String,
-            default: 'test'
         }
     },
     computed: {

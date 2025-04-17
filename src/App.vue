@@ -1,23 +1,22 @@
 <template>
   <div>
-   <Aula_15 :variant="variant"/>
+   <Aula_16 :variant="variant"/>
   </div>
   <p>paragrafo</p>
 </template>
 
 <script>
-import Aula_15 from './components/Aula_15.vue';
-
+import Aula_16 from './components/Aula_16.vue';
 
 
 export default {
   name: 'App',
   components: {
-    Aula_15
+    Aula_16
   },
   data () {
     return {
-      variant:'danger'
+     variant: 'success'
     }
   }
 }
