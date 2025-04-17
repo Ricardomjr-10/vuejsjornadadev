@@ -2,13 +2,18 @@
     <div class="container">
         <h1>Enviando dados para o componente filho (props)</h1>
         <div :class="baseClass">
-            Seu formulario foi enviado com sucesso
+            {{ text }}
         </div>
     </div>
 </template>
 
 <script>
 export default {
+    data() {
+        return {
+            text:'Seu formulario foi enviado com sucesso'
+        }
+    },
     props: ['variant'],
     computed: {
         baseClass() {

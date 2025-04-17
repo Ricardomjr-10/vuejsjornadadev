@@ -1,6 +1,6 @@
 <template>
   <div>
-   <Aula_15 variant="success"/>
+   <Aula_15 :variant="variant"/>
   </div>
   <p>paragrafo</p>
 </template>
@@ -17,7 +17,7 @@ export default {
   },
   data () {
     return {
-    
+      variant:'danger'
     }
   }
 }
