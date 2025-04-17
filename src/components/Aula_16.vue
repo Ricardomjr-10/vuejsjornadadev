@@ -8,7 +8,7 @@
     <div :class="baseClass">
             {{ text }}
             <slot />
-            <button>
+            <button @click="onClick">
                 X
             </button>
         </div>
@@ -38,6 +38,12 @@ export default {
                 'alert',
                 this.variant ? `alert-${this.variant}` : ''
             ]
+        }
+    },
+    methods: {
+        onClick() {
+            this.$emit('close')
+            console.log('clicou')
         }
     }
 }

@@ -1,6 +1,10 @@
 <template>
   <div>
-   <Aula_16 :variant="variant"/>
+   <Aula_16 
+   v-if="showAlert"
+   :variant="variant"
+   @close="onClose"
+   />
   </div>
   <p>paragrafo</p>
 </template>
@@ -16,7 +20,14 @@ export default {
   },
   data () {
     return {
+      showAlert: true,
      variant: 'success'
+    }
+  },
+  methods: {
+    onClose() {
+      this.showAlert = false
+      console.log('on close')
     }
   }
 }
