@@ -1,34 +1,26 @@
 <template>
   <div>
-   <Aula_16 
-   v-if="showAlert"
-   :variant="variant"
-   @close="onClose"
-   />
+    <Aula_17/>
   </div>
-  <p>paragrafo</p>
+  <p>Paragrafo</p>
 </template>
 
 <script>
-import Aula_16 from './components/Aula_16.vue';
+import Aula_17 from './components/Aula_17.vue';
 
 
 export default {
   name: 'App',
   components: {
-    Aula_16
+    Aula_17
   },
   data () {
     return {
-      showAlert: true,
-     variant: 'success'
+  
     }
   },
   methods: {
-    onClose() {
-      this.showAlert = false
-      console.log('on close')
-    }
+
   }
 }
 </script>
@@ -39,5 +31,9 @@ p{
   width: 100px;
   margin: auto;
   text-align: center;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 20px;
+  color: aliceblue;
 }
 </style>
