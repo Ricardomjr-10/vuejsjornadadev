@@ -1,39 +1,30 @@
 <template>
-  <div>
-    <Aula_17/>
-  </div>
-  <p>Paragrafo</p>
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+  </nav>
+  <router-view/>
 </template>
 
-<script>
-import Aula_17 from './components/Aula_17.vue';
-
-
-export default {
-  name: 'App',
-  components: {
-    Aula_17
-  },
-  data () {
-    return {
-  
-    }
-  },
-  methods: {
-
-  }
-}
-</script>
-
 <style>
-p{
-  background: blueviolet;
-  width: 100px;
-  margin: auto;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  padding: 10px;
-  border-radius: 15px;
-  font-size: 20px;
-  color: aliceblue;
+  color: #2c3e50;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
