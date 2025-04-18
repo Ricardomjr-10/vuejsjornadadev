@@ -3,9 +3,20 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/aula_17">Aula17</router-link>
+    <router-link :to="rotaDinamica">Servicos</router-link>
   </nav>
   <router-view/>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      rotaDinamica: { name: 'servicos'}
+    }
+  }
+}
+</script>
 
 <style>
 #app {
