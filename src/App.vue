@@ -5,6 +5,7 @@
     <router-link to="/aula_17">Aula17</router-link> |
     <router-link to="/aula_18">Aula18</router-link> |
     <router-link to="/aula_19">aula_19</router-link> |
+    <router-link to="/aula_20">aula_20</router-link> |
     <router-link :to="rotaDinamica">Servico</router-link> |
     <router-link to="/usuarios/10">Usuario</router-link>
   </nav>
