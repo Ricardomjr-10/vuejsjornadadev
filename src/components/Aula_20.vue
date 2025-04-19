@@ -6,8 +6,8 @@
             <p>Mutations - atualizar dados do state
                 funcao storeUser(state) {}
             </p>
-            <button>
-                Save user
+            <button @click="updateUser">
+                Atualizar perfil
             </button>
           
             <p>{{ $store.state.user.first_name }} {{ $store.state.user.last_name }} <br>
@@ -25,13 +25,23 @@ export default {
           
         }
     },
+    methods: {
+        updateUser() {
+            const newUser = {
+            first_name: 'Breno',
+            last_name: 'Muller',
+            email: 'breno@breno.com'
+          }
+          this.$store.commit('storeUser', newUser)
+        }
+    },
     created() {
-      const newUser = {
-        first_name: 'Breno',
-        last_name: 'Muller',
-        email: 'breno@breno.com'
-      }
-      this.$store.commit('storeUser', newUser)
+    //   const newUser = {
+    //     first_name: 'Breno',
+    //     last_name: 'Muller',
+    //     email: 'breno@breno.com'
+    //   }
+    //   this.$store.commit('storeUser', newUser)
       //mudar os dados do objeto user no state
     }
 }
