@@ -21,6 +21,11 @@ const routes = [
     component: () => import('../components/Aula_17.vue')
   },
   {
+    path: '/aula_18',
+    name: 'router2',
+    component: () => import('../components/Aula_18.vue')
+  },
+  {
     path: '/servico',
     name: 'servico',
     component: () => import('../views/ServicoView.vue')
