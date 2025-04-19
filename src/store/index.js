@@ -7,7 +7,21 @@ export default createStore({
       last_name: 'Rocha',
       email: 'ricardomjr2@gmail.com'
     },
-    produtos: [],
+    products: [
+      {
+        id: 1,
+        name: 'Bola',
+        price: 100
+      },{
+        id: 2,
+        name: 'Chuteira',
+        price: 200
+      },{
+        id: 3,
+        name: 'Meião',
+        price: 50
+      }
+    ],
     clientes: []
   },
   getters: {
