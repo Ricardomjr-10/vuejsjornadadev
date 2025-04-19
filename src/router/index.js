@@ -20,9 +20,12 @@ const routes = [
     name: 'router',
     component: () => import('../components/Aula_17.vue')
   },
-  path: '/servicos',
-  name: 'servicos',
-  component: () => import('../views/ServicoView.vue')
+  {
+    path: '/servico',
+    name: 'servico',
+    component: () => import('../views/ServicoView.vue')
+  }
+
 ]
 
 const router = createRouter({
