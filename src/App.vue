@@ -11,10 +11,19 @@
     <router-link to="/usuarios/10">Usuario</router-link>
   </nav>
   <router-view/>
+  <div>
+    <AppProducts/>
+  </div>
 </template>
 
 <script>
+import AppProducts from './components/Products/AppProducts.vue';
+
 export default {
+  name: 'App',
+  components: {
+    AppProducts
+  },
   data() {
     return {
       rotaDinamica: { name: 'servico'}
