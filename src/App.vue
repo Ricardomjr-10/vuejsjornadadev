@@ -7,12 +7,13 @@
     <router-link to="/aula_19">aula_19</router-link> |
     <router-link to="/aula_20">aula_20</router-link> |
     <router-link to="/aula_21">aula_21</router-link> |
-    <RouterLink to="/aula_22">aula_22</RouterLink>
+    <RouterLink to="/aula_22">aula_22</RouterLink> |
     <router-link :to="rotaDinamica">Servico</router-link> |
     <router-link to="/usuarios/10">Usuario</router-link>
   </nav>
   <router-view/>
   <div>
+    {{ $store.getters.total }}
     <AppProducts/>
     <br><br>
 <pre>
