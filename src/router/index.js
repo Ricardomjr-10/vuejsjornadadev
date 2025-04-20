@@ -41,6 +41,11 @@ const routes = [
     component: () => import('../components/Aula_21.vue')
   },
   {
+    path: '/aula_22',
+    name: 'vuex-getter',
+    component: () => import('../components/Aula_22.vue')
+  },
+  {
     path: '/servico',
     name: 'servico',
     component: () => import('../views/ServicoView.vue')
