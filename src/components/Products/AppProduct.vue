@@ -4,7 +4,10 @@
         <button @click="addProduct">
             Adicionar
         </button>
-        <button @click="removeProduct">
+        <!-- se estiver item no cart aparece o botao de remover -->
+        <button 
+        v-if="itemCart"
+        @click="removeProduct">
             Remover
         </button>
     </div>
@@ -21,6 +24,12 @@ export default {
         },
         removeProduct() {
             this.$store.commit('removeProduct', this.product.id)
+        }
+       
+    },
+    computed: {
+        itemCart() {
+            return this.$store.state.cart.length
         }
     }
 
