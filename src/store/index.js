@@ -22,13 +22,20 @@ export default createStore({
         price: 50
       }
     ],
-    clientes: []
+    cart: []
   },
   getters: {
   },
   mutations: {
     storeUser(state, data) {
       state.user = data
+    },
+    addProduct(state, data) {
+      state.cart.push(data)
+    },
+    removeProduct(state, id) {
+      const index = state.cart.findIndex(obj => obj.id === id)
+      state.cart.splice(index, 1)
     }
   },
   actions: {

@@ -13,6 +13,10 @@
   <router-view/>
   <div>
     <AppProducts/>
+    <br><br>
+<pre>
+  {{ $store.state.cart }}
+</pre>
   </div>
 </template>
 
