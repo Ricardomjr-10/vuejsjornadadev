@@ -51,6 +51,11 @@ const routes = [
     component: () => import('../components/Aula_23.vue')
   },
   {
+    path: '/aula_24',
+    name: 'composition api setup',
+    component: () => import('../components/Aula_24.vue')
+  },
+  {
     path: '/servico',
     name: 'servico',
     component: () => import('../views/ServicoView.vue')
