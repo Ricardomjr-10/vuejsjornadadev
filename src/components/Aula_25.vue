@@ -7,29 +7,38 @@
     </div><br>
     <button @click="updateUser">
         Alterar nome
-    </button> <br>
-
-    {{ user.first_name }} {{ user.last_name }}
+    </button>
+     <br> <br>
+    <h3>User</h3>
+    {{ user.first_name }} {{ user.last_name }} <br> <br>
+    <h3>Admin</h3>
+    {{ admin.first_name }} {{ admin.last_name }}
 </template>
 
 <script>
-import { reactive } from 'vue';
+import { reactive, ref } from 'vue';
 
 export default {
     setup() {
-        const user = reactive({
+        const user = reactive({ // forma reativa
             first_name: 'Muller',
             last_name: 'Rocha'
         })
 
+        const admin = ref({
+            first_name: 'Admin',
+            last_name: 'master'
+        })
+
         const updateUser = () => {
             alert('Alterenado...')
-            user.first_name = 'Ricardp'
+            user.first_name = 'Ricardo'
         }
 
         return {
             user,
-            updateUser
+            admin,
+            updateUser,
         }
 
 }
