@@ -61,6 +61,11 @@ const routes = [
     component: () => import('../components/Aula_25.vue')
   },
   {
+    path: '/aula_26',
+    name: '/composition api computed watch',
+    component: () => import('../components/Aula_26.vue')
+  },
+  {
     path: '/servico',
     name: 'servico',
     component: () => import('../views/ServicoView.vue')
