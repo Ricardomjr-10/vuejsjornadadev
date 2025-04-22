@@ -13,7 +13,9 @@
     <h3>User</h3>
     {{ user.first_name }} {{ user.last_name }} <br> <br>
     <h3>fullName</h3>
-    {{ user.first_name }} {{ user.last_name }}
+    {{ user.first_name }} {{ user.last_name }} <br> <br>
+    <h3>User2</h3>
+    {{ user2.nome }} {{ user2.sobreNome }}
 </template>
 
 <script>
@@ -23,8 +25,14 @@ export default {
     setup() {
         const user = ref({ // forma reativa
             first_name: 'Muller',
-            last_name: 'Rocha'
+            last_name: 'Rocha',
         })
+        const user2 = ref({
+            nome:'Zuleide',
+            sobreNome: 'Neves'
+        })
+
+    
 
         const fullName = computed(()=> {
             return `${user.value.first_name} ${user.value.last_name}`
@@ -46,11 +54,13 @@ export default {
         const updateUser = () => {
             alert('Alterenado...')
             user.value.first_name = 'Ricardo'
+            user2.value.sobreNome = 'Rocha'
            
         }
 
         return {
             user,
+            user2,
             fullName,
             updateUser,
         }
