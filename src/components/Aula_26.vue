@@ -2,7 +2,8 @@
     <div>
         <h1>introducao a Composition api - computed, watch</h1>
         <p>
-          
+          exemplo de computed: const fullName = computed(()=>{})
+          watch(user, () => {},{deep:true})
         </p>
     </div><br>
     <button @click="updateUser">
@@ -16,7 +17,7 @@
 </template>
 
 <script>
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 
 export default {
     setup() {
@@ -27,6 +28,12 @@ export default {
 
         const fullName = computed(()=> {
             return `${user.value.first_name} ${user.value.last_name}`
+        })
+
+        watch(user, () => {
+            console.log('logica cabulosa')
+        }, {
+            deep:true
         })
        
 
