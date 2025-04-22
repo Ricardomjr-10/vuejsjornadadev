@@ -30,10 +30,16 @@ export default {
             return `${user.value.first_name} ${user.value.last_name}`
         })
 
+        //todo objeto
         watch(user, () => {
             console.log('logica cabulosa')
         }, {
             deep:true
+        })
+
+        //uma parte
+        watch(()=> user.value.first_name, () => {
+            console.log('outra logica')
         })
        
 
