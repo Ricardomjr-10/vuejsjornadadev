@@ -16,22 +16,22 @@
   </nav>
   <router-view/>
   <div>
-    {{ $store.getters.total }}
+    <!-- {{ $store.getters.total }}
     <AppProducts/>
-    <br><br>
-<pre>
+    <br><br> -->
+<!-- <pre>
   {{ $store.state.cart }}
-</pre>
+</pre> -->
   </div>
 </template>
 
 <script>
-import AppProducts from './components/Products/AppProducts.vue';
+//import AppProducts from './components/Products/AppProducts.vue';
 
 export default {
   name: 'App',
   components: {
-    AppProducts
+    // AppProducts
   },
   data() {
     return {
