@@ -30,6 +30,8 @@ export default {
             first_name: 'Admin',
             last_name: 'master'
         })
+        const count = ref('teste')
+        console.log(count)
 
         const updateUser = () => {
             alert('Alterenado...')
