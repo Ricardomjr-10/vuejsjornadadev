@@ -56,6 +56,11 @@ const routes = [
     component: () => import('../components/Aula_24.vue')
   },
   {
+    path: '/aula_25',
+    name: '/composition api reactive',
+    component: () => import('../components/Aula_25.vue')
+  },
+  {
     path: '/servico',
     name: 'servico',
     component: () => import('../views/ServicoView.vue')

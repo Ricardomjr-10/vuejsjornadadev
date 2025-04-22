@@ -10,6 +10,7 @@
     <RouterLink to="/aula_22">aula_22</RouterLink> |
     <RouterLink to="/aula_23">aula_23</RouterLink> |
     <RouterLink to="/aula_24">aula_24</RouterLink> |
+    <RouterLink to="/aula_25">aula_25</RouterLink> |
     <router-link :to="rotaDinamica">Servico</router-link> |
     <router-link to="/usuarios/10">Usuario</router-link>
   </nav>
