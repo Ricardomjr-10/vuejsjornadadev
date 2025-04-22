@@ -3,6 +3,7 @@
         <h1>introducao a Composition api - reatividade</h1>
         <p>
             okhar na documentacao sobre reactive e ref
+            para usar o ref precisa do ex: admin.value.first_name
         </p>
     </div><br>
     <button @click="updateUser">
@@ -33,6 +34,7 @@ export default {
         const updateUser = () => {
             alert('Alterenado...')
             user.first_name = 'Ricardo'
+            admin.value.first_name = 'Breno'
         }
 
         return {
