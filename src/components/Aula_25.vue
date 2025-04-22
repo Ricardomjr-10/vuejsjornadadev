@@ -4,8 +4,12 @@
         <p>
             okhar na documentacao sobre reactive e ref
         </p>
-    </div>
-    {{ user.first_name }}
+    </div><br>
+    <button @click="updateUser">
+        Alterar nome
+    </button> <br>
+
+    {{ user.first_name }} {{ user.last_name }}
 </template>
 
 <script>
@@ -17,8 +21,15 @@ export default {
             first_name: 'Muller',
             last_name: 'Rocha'
         })
+
+        const updateUser = () => {
+            alert('Alterenado...')
+            user.first_name = 'Ricardp'
+        }
+
         return {
-            user
+            user,
+            updateUser
         }
 
 }
