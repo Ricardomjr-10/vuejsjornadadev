@@ -1,9 +1,8 @@
 <template>
     <div>
-        <h1>introducao a Composition api - reatividade</h1>
+        <h1>introducao a Composition api - computed, watch</h1>
         <p>
-            okhar na documentacao sobre reactive e ref
-            para usar o ref precisa do ex: admin.value.first_name
+          
         </p>
     </div><br>
     <button @click="updateUser">
@@ -12,36 +11,34 @@
      <br> <br>
     <h3>User</h3>
     {{ user.first_name }} {{ user.last_name }} <br> <br>
-    <h3>Admin</h3>
-    {{ admin.first_name }} {{ admin.last_name }}
+    <h3>fullName</h3>
+    {{ user.first_name }} {{ user.last_name }}
 </template>
 
 <script>
-import { reactive, ref } from 'vue';
+import { computed, ref } from 'vue';
 
 export default {
     setup() {
-        const user = reactive({ // forma reativa
+        const user = ref({ // forma reativa
             first_name: 'Muller',
             last_name: 'Rocha'
         })
 
-        const admin = ref({
-            first_name: 'Admin',
-            last_name: 'master'
+        const fullName = computed(()=> {
+            return `${user.value.first_name} ${user.value.last_name}`
         })
-        const count = ref('teste')
-        console.log(count)
+       
 
         const updateUser = () => {
             alert('Alterenado...')
-            user.first_name = 'Ricardo'
-            admin.value.first_name = 'Breno'
+            user.value.first_name = 'Ricardo'
+           
         }
 
         return {
             user,
-            admin,
+            fullName,
             updateUser,
         }
 
