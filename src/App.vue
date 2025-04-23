@@ -16,7 +16,8 @@
     <RouterLink to="/aula_28">aula_28</RouterLink> |
     <router-link :to="rotaDinamica">Servico</router-link> |
     <router-link to="/usuarios/10">Usuario</router-link>
-    <Aula_28 @update="getUpdate"/>
+    <Aula_28 @update="getUpdate" variant="danger"
+    />
   </nav>
   <router-view/>
   <div>

@@ -2,7 +2,7 @@
     <div>
         <h1>Aula 28 - introducao a composition api - Props e Emit</h1>
         <p>
-            <button @click="$emit('update', true)">
+            <button @click="sendData">
                 {{ variant }}
                 <slot>save</slot>
                 <slot name="icon"></slot>
@@ -20,8 +20,16 @@ export default {
         }
     },
 
-    setup(props, {slots}) {
+    setup(props, {slots, emit}) {
         console.log(props.variant, slots)
+
+        const sendData = () => {
+            emit('update', props.variant)
+        }
+
+        return {
+            sendData
+        }
     }
 }
 </script>
