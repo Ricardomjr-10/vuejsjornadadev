@@ -2,8 +2,11 @@
     <div>
         <h1>Aula 27 - composition api - ciclo de vida(hooks)</h1>
         <p>
-
         </p>
+        <button @click="onShowh2 = !onShowh2">
+            Mostrar h2
+        </button>
+        <h2 v-if="onShowh2">Mostrado</h2>
     </div>
 </template>
 
@@ -12,7 +15,8 @@ import {
     onBeforeMount,
     onMounted,
     onBeforeUnmount,
-    onUnmounted
+    onUnmounted,
+    ref
  } from 'vue';
 
 export default {
@@ -32,6 +36,12 @@ export default {
         onUnmounted(()=> {
             console.log('onUnmounted')
         })
+
+        const onShowh2 = ref(true)
+
+        return {
+            onShowh2
+        }
     },
 }
 </script>
