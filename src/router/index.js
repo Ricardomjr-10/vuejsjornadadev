@@ -66,6 +66,11 @@ const routes = [
     component: () => import('../components/Aula_26.vue')
   },
   {
+    path: '/aula_27',
+    name: 'hooks',
+    component: () => import('../components/Aula_27.vue')
+  },
+  {
     path: '/servico',
     name: 'servico',
     component: () => import('../views/ServicoView.vue')
