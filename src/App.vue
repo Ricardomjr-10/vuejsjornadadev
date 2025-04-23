@@ -16,6 +16,7 @@
     <RouterLink to="/aula_28">aula_28</RouterLink> |
     <router-link :to="rotaDinamica">Servico</router-link> |
     <router-link to="/usuarios/10">Usuario</router-link>
+    <Aula_28 @update="getUpdate"/>
   </nav>
   <router-view/>
   <div>
@@ -29,12 +30,23 @@
 </template>
 
 <script>
+import Aula_28 from './components/Aula_28.vue';
+
 //import AppProducts from './components/Products/AppProducts.vue';
 
 export default {
   name: 'App',
   components: {
     // AppProducts
+    Aula_28
+  },
+  setup() {
+    const getUpdate = (data) => {
+      console.log('getUpdate', data)
+    }
+    return {
+      getUpdate
+    }
   },
   data() {
     return {
