@@ -18,6 +18,7 @@
     <router-link to="/usuarios/10">Usuario</router-link>
     <Aula_28 @update="getUpdate" variant="danger"
     />
+    <AulterarCor></AulterarCor>
   </nav>
   <router-view/>
   <div>
@@ -32,6 +33,7 @@
 
 <script>
 import Aula_28 from './components/Aula_28.vue';
+import AulterarCor from './components/AulterarCor.vue';
 
 //import AppProducts from './components/Products/AppProducts.vue';
 
@@ -39,7 +41,8 @@ export default {
   name: 'App',
   components: {
     // AppProducts
-    Aula_28
+    Aula_28,
+    AulterarCor
   },
   setup() {
     const getUpdate = (data) => {

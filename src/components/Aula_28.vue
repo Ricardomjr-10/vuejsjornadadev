@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Aula 28 - introducao a composition api - Props e Emit</h1>
+        <h1 @click="mudarCor">Aula 28 - introducao a composition api - Props e Emit</h1>
         <p>
             <button @click="sendData">
                 {{ variant }}
@@ -25,10 +25,16 @@ export default {
 
         const sendData = () => {
             emit('update', props.variant)
+
+        }
+        const mudarCor = () => {
+            const titulo = document.querySelector('h1')
+            titulo.style.color='red'
         }
 
         return {
-            sendData
+            sendData,
+            mudarCor
         }
     }
 }
